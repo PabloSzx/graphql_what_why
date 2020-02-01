@@ -2,7 +2,11 @@ import express from "express";
 import notifier from "node-notifier";
 import requireEnv from "require-env-variable";
 
+import { IndexRoutes } from "./routes";
+
 const app = express();
+
+app.use(IndexRoutes);
 
 const port = parseInt(requireEnv("PORT").PORT, 10);
 

@@ -2,7 +2,13 @@ import express from "express";
 import notifier from "node-notifier";
 import requireEnv from "require-env-variable";
 
+import { apolloServer } from "./apollo";
+
 const app = express();
+
+apolloServer.applyMiddleware({
+  app,
+});
 
 const port = parseInt(requireEnv("PORT").PORT, 10);
 
