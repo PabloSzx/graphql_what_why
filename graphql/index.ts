@@ -1,5 +1,4 @@
-import { ApolloServer, gql } from "apollo-server-express";
-import express from "express";
+import { ApolloServer, gql } from "apollo-server";
 
 import { helloWorldData } from "../data";
 
@@ -25,14 +24,8 @@ const apolloServer = new ApolloServer({
   resolvers,
 });
 
-const app = express();
-
-apolloServer.applyMiddleware({
-  app,
-});
-
 const port = parseInt(process.env.PORT || "3000", 10);
 
-app.listen({ port }, () => {
+apolloServer.listen({ port }, () => {
   console.log(`🚀  GraphQL API Server ready at http://localhost:${port}`);
 });
