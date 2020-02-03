@@ -5,17 +5,17 @@ export default () => {
     <div>
       <p>
         <Link href="/schema_first" passHref>
-          <a>Schema First</a>
+          <a>GraphQL Schema First</a>
         </Link>
       </p>
       <p>
         <Link href="/rest" passHref>
-          <a>REST</a>
+          <a>REST API</a>
         </Link>
       </p>
       <p>
         <Link href="/code_first" passHref>
-          <a>Schema First</a>
+          <a>GraphQL Code First</a>
         </Link>
       </p>
     </div>
