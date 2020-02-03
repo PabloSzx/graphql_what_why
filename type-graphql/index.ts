@@ -1,7 +1,6 @@
 import "reflect-metadata";
 
-import { ApolloServer } from "apollo-server-express";
-import express from "express";
+import { ApolloServer } from "apollo-server";
 import path from "path";
 import {
   buildSchemaSync,
@@ -27,8 +26,6 @@ export class HelloWorldResolver {
   }
 }
 
-const app = express();
-
 const apolloServer = new ApolloServer({
   schema: buildSchemaSync({
     resolvers: [HelloWorldResolver],
@@ -36,12 +33,9 @@ const apolloServer = new ApolloServer({
   }),
 });
 
-apolloServer.applyMiddleware({
-  app,
-});
-
 const port = parseInt(process.env.PORT || "3000", 10);
 
-app.listen({ port }, () => {
-  console.log(`🚀  TypeGraphQL API Server ready at http://localhost:${port}`);
+apolloServer.listen({ port }, () => {
+  console.log(`🚀  TypeGraphQL API Server ready at\
+ http://localhost:${port}`);
 });

@@ -27,5 +27,6 @@ const apolloServer = new ApolloServer({
 const port = parseInt(process.env.PORT || "3000", 10);
 
 apolloServer.listen({ port }, () => {
-  console.log(`🚀  GraphQL API Server ready at http://localhost:${port}`);
+  console.log(`🚀  GraphQL API Server ready at\
+ http://localhost:${port}`);
 });
