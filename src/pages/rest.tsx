@@ -6,10 +6,6 @@ const REST: NextPage = () => {
     "http://localhost:3002/helloWorld",
   );
 
-  console.log({
-    data,
-    error,
-  });
   if (error) {
     throw error;
   }
