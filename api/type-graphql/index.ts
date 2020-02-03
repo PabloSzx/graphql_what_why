@@ -31,6 +31,7 @@ const apolloServer = new ApolloServer({
     resolvers: [HelloWorldResolver],
     emitSchemaFile: path.resolve(__dirname, "./schema.gql"),
   }),
+  cors: true,
 });
 
 const port = parseInt(process.env.PORT || "3000", 10);

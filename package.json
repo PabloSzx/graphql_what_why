@@ -8,12 +8,12 @@
   "scripts": {
     "build": "next build",
     "dev": "cross-env NODE_ENV=development run-p -l dev-*",
-    "dev-client": "cross-env PORT=3000 ts-node -P ./api/tsconfig.json ./client/index.tsx",
+    "dev-client": "next -p 3000",
     "dev-graphql": "cross-env PORT=3001 ts-node-dev -P ./api/tsconfig.json --respawn ./api/graphql/index.ts",
     "dev-rest": "cross-env PORT=3002 ts-node-dev  -P ./api/tsconfig.json --respawn ./api/rest/index.ts",
     "dev-typegraphql": "cross-env PORT=3003 ts-node-dev  -P ./api/tsconfig.json --respawn ./api/type-graphql/index.ts",
     "start": "cross-env NODE_ENV=production run-p -l start-*",
-    "start-client": "cross-env PORT=3000 ts-node -P ./api/tsconfig.json ./client/index.tsx",
+    "start-client": "next start -p 3000",
     "start-graphql": "cross-env PORT=3001 ts-node  -P ./api/tsconfig.json ./api/graphql/index.ts",
     "start-rest": "cross-env PORT=3002 ts-node  -P ./api/tsconfig.json ./api/rest/index.ts",
     "start-typegraphql": "cross-env PORT=3003 ts-node  -P ./api/tsconfig.json ./api/type-graphql/index.ts"
@@ -21,6 +21,7 @@
   "dependencies": {
     "apollo-server": "^2.9.16",
     "axios": "^0.19.2",
+    "axios-hooks": "^1.9.0",
     "chokidar": "^3.3.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -28,12 +29,15 @@
     "graphql-request": "^1.8.2",
     "graphql-tag": "^2.10.1",
     "graphql-tag-ts": "^0.1.14",
+    "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.15",
     "next": "^9.2.1",
+    "next-urql": "^0.2.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^0.17.6",
+    "urql": "^1.8.2",
     "wait-on": "^4.0.0"
   },
   "devDependencies": {

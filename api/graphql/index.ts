@@ -22,6 +22,7 @@ const resolvers = {
 const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
+  cors: true,
 });
 
 const port = parseInt(process.env.PORT || "3000", 10);

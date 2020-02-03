@@ -1,6 +1,7 @@
 dependencies:
   apollo-server: 2.9.16_graphql@14.6.0
   axios: 0.19.2
+  axios-hooks: 1.9.0_axios@0.19.2+react@16.12.0
   chokidar: 3.3.1
   cors: 2.8.5
   express: 4.17.1
@@ -8,12 +9,15 @@ dependencies:
   graphql-request: 1.8.2
   graphql-tag: 2.10.1_graphql@14.6.0
   graphql-tag-ts: 0.1.14_graphql@14.6.0
+  isomorphic-unfetch: 3.0.0
   lodash: 4.17.15
   next: 9.2.1_abb09bebc0e0ed228e774569cd754869
+  next-urql: 0.2.5_f9fa721d5b0421669d548b56ca1a2e5d
   react: 16.12.0
   react-dom: 16.12.0_react@16.12.0
   reflect-metadata: 0.1.13
   type-graphql: 0.17.6_graphql@14.6.0
+  urql: 1.8.2_graphql@14.6.0+react@16.12.0
   wait-on: 4.0.0
 devDependencies:
   '@types/cors': 2.8.6
@@ -996,6 +1000,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-JONRbXbTXc9WQE2mAZd1p0Z3DZ/6vaQIkgYMSTP3KjRCyd7rCZCcfhCyX+YjwcKxcZ82UrxbRD358bpExNgrjw==
+  /@babel/runtime/7.7.6:
+    dependencies:
+      regenerator-runtime: 0.13.3
+    dev: false
+    resolution:
+      integrity: sha512-BWAJxpNVa0QlE5gZdWjSxXtemZyZ9RmrmVozxt3NUXeZhVIJ5ANyqmMc0JDrivBZyxUuQvFxlvH4OWWOogGfUw==
   /@babel/template/7.8.3:
     dependencies:
       '@babel/code-frame': 7.8.3
@@ -1119,6 +1129,12 @@ packages:
       '@types/node': 13.7.0
     resolution:
       integrity: sha512-RoX2EZjMiFMjZh9lmYrwgoP9RTpAjSHiJxdp4oidAQVO02T7HER3xj9UKue5534ULWeqVEkujhWcyvUce+d68w==
+  /@types/cheerio/0.22.16:
+    dependencies:
+      '@types/node': 13.7.0
+    dev: false
+    resolution:
+      integrity: sha512-bSbnU/D4yzFdzLpp3+rcDj0aQQMIRUBNJU7azPxdqMpnexjUSvGJyDuOBQBHeOZh1mMKgsJm6Dy+LLh80Ew4tQ==
   /@types/connect/3.4.33:
     dependencies:
       '@types/node': 13.7.0
@@ -1138,6 +1154,19 @@ packages:
       '@types/express': 4.17.2
     resolution:
       integrity: sha512-invOmosX0DqbpA+cE2yoHGUlF/blyf7nB0OGYBBiH27crcVm5NmFaZkLP4Ta1hGaesckCi5lVLlydNJCxkTOSg==
+  /@types/enzyme-adapter-react-16/1.0.5:
+    dependencies:
+      '@types/enzyme': 3.10.4
+    dev: false
+    resolution:
+      integrity: sha512-K7HLFTkBDN5RyRmU90JuYt8OWEY2iKUn43SDWEoBOXd/PowUWjLZ3Q6qMBiQuZeFYK/TOstaZxsnI0fXoAfLpg==
+  /@types/enzyme/3.10.4:
+    dependencies:
+      '@types/cheerio': 0.22.16
+      '@types/react': 16.9.19
+    dev: false
+    resolution:
+      integrity: sha512-P5XpxcIt9KK8QUH4al4ttfJfIHg6xmN9ZjyUzRSzAsmDYwRXLI05ng/flZOPXrEXmp8ZYiN8/tEXYK5KSOQk3w==
   /@types/events/3.0.0:
     dev: false
     resolution:
@@ -1238,7 +1267,6 @@ packages:
     resolution:
       integrity: sha512-GnZbirvmqZUzMgkFn70c74OQpTTUcCzlhQliTzYjQMqg+hVKcDnxdL19Ne3UdYzdMA/+W3eb646FWn/ZaT1NfQ==
   /@types/prop-types/15.7.3:
-    dev: true
     resolution:
       integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
   /@types/range-parser/1.2.3:
@@ -1254,7 +1282,6 @@ packages:
     dependencies:
       '@types/prop-types': 15.7.3
       csstype: 2.6.8
-    dev: true
     resolution:
       integrity: sha512-LJV97//H+zqKWMms0kvxaKYJDG05U2TtQB3chRLF8MPNs+MQh/H1aGlyDUxjaHvu08EAGerdX2z4LTBc7ns77A==
   /@types/semver/6.2.1:
@@ -1963,6 +1990,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-wMHVg2EOHaMRxbzgFJ9gtjOOCrI80OHLG14rxi28XwOW8ux6IiEbRCGGGqCtdAIg4FQCbW20k9RsT4y3gJlFug==
+  /axios-hooks/1.9.0_axios@0.19.2+react@16.12.0:
+    dependencies:
+      '@babel/runtime': 7.7.6
+      axios: 0.19.2
+      lru-cache: 5.1.1
+      react: 16.12.0
+    dev: false
+    peerDependencies:
+      axios: ^0.18.0 || ^0.19.0
+      react: ^16.8.0-0
+    resolution:
+      integrity: sha512-qvVeEHaLq9ueAlRT1A+MWeyC9d9/JqI7/unXmBwJsUe9XB9zX+9KJG/dmFVfw/tB+GIqOP6CFpWPfLh5T+ra2w==
   /axios/0.19.2:
     dependencies:
       follow-redirects: 1.5.10
@@ -2887,7 +2926,6 @@ packages:
     resolution:
       integrity: sha512-B7u9vvtXEqeU2rzdt+Kfw5O9Nd46R7KNjJoP7Y5lGQs6c7n1Et5Ilofh2W9OjBV/ZiJV5+7j9ShWgiYNtH/57A==
   /csstype/2.6.8:
-    dev: true
     resolution:
       integrity: sha512-msVS9qTuMT5zwAGCVm4mxfrZ18BNc6Csd0oJAtiFMZ1FAx1CCvy2+5MDmYoix63LM/6NDbNtodCiGYGmFgO0dA==
   /currently-unhandled/0.4.1:
@@ -4340,6 +4378,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
+  /isomorphic-unfetch/3.0.0:
+    dependencies:
+      node-fetch: 2.6.0
+      unfetch: 4.1.0
+    dev: false
+    resolution:
+      integrity: sha512-V0tmJSYfkKokZ5mgl0cmfQMTb7MLHsBMngTkbLY0eXvKqiVRRoZP04Ly+KhKrJfKtzC9E6Pp15Jo+bwh7Vi2XQ==
   /isstream/0.1.2:
     dev: false
     resolution:
@@ -4930,6 +4975,24 @@ packages:
     dev: false
     resolution:
       integrity: sha1-yobR/ogoFpsBICCOPchCS524NCw=
+  /next-urql/0.2.5_f9fa721d5b0421669d548b56ca1a2e5d:
+    dependencies:
+      '@types/enzyme': 3.10.4
+      '@types/enzyme-adapter-react-16': 1.0.5
+      isomorphic-unfetch: 3.0.0
+      react: 16.12.0
+      react-dom: 16.12.0_react@16.12.0
+      react-ssr-prepass: 1.1.0_react@16.12.0
+      urql: 1.8.2_graphql@14.6.0+react@16.12.0
+    dev: false
+    peerDependencies:
+      isomorphic-unfetch: ^3.0.0
+      react: ^16.8.6
+      react-dom: ^16.8.6
+      react-is: ^16.8.6
+      urql: ^1.1.0
+    resolution:
+      integrity: sha512-PUOtP0g/TQcDWBtvOA6F80VDFRh8HLTWGWhZGE0e4indl9ryTphFyKD8108Rou3fY/07Ogg0p7yllWRiSqC9cQ==
   /next/9.2.1_abb09bebc0e0ed228e774569cd754869:
     dependencies:
       '@ampproject/toolbox-optimizer': 1.1.1_lru-cache@5.1.1
@@ -5178,6 +5241,12 @@ packages:
   /object-inspect/1.7.0:
     resolution:
       integrity: sha512-a7pEHdh1xKIAgTySUGgLMx/xwDZskN1Ud6egYYN3EdRW4ZMPNEDUTF+hwy2LUC+Bl+SyLXANnwz/jyh/qutKUw==
+  /object-is/1.0.2:
+    dev: false
+    engines:
+      node: '>= 0.4'
+    resolution:
+      integrity: sha512-Epah+btZd5wrrfjkJZq1AOB9O6OxUQto45hzFd7lXGrpHPGE0W1k+426yrZV+k6NJOzLNNW/nVsmZdIWsAqoOQ==
   /object-keys/1.1.1:
     engines:
       node: '>= 0.4'
@@ -6174,6 +6243,28 @@ packages:
     dev: false
     resolution:
       integrity: sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
+  /react-ssr-prepass/1.1.0_react@16.12.0:
+    dependencies:
+      object-is: 1.0.2
+      react: 16.12.0
+    dev: false
+    peerDependencies:
+      react: ^16.8.0
+      react-is: ^16.8.0
+    resolution:
+      integrity: sha512-FKoL5+YJxkNDhcTFfBgWM82PPHS4AC+uc05ja//CR3+xHPQ6i9UfWyHx8vakIIaBzsHeaRtRhOO8uHhn1R8Dnw==
+  /react-wonka/2.0.1_2733d7df70d079e6b64edb73fefa728e:
+    dependencies:
+      react: 16.12.0
+      scheduler: 0.18.0
+      wonka: 4.0.7
+    dev: false
+    peerDependencies:
+      react: '>= 16.8.0'
+      scheduler: '>= 0.16.0'
+      wonka: '>= 4.0.0'
+    resolution:
+      integrity: sha512-mM2UH2gnK5LLzaqVWd6JCLrB1vO3I4PN/sQZbjvzsjms4vSv+nKwelNUftM0KeC+LtTPC4GGsuxyu2XJnsCUTw==
   /react/16.12.0:
     dependencies:
       loose-envify: 1.4.0
@@ -7466,6 +7557,19 @@ packages:
     dev: false
     resolution:
       integrity: sha1-ODjpfPxgUh63PFJajlW/3Z4uKPE=
+  /urql/1.8.2_graphql@14.6.0+react@16.12.0:
+    dependencies:
+      graphql: 14.6.0
+      react: 16.12.0
+      react-wonka: 2.0.1_2733d7df70d079e6b64edb73fefa728e
+      scheduler: 0.18.0
+      wonka: 4.0.7
+    dev: false
+    peerDependencies:
+      graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
+      react: '>= 16.8.0'
+    resolution:
+      integrity: sha512-ilTTkRxQrY1H9kz8YPFjE4Npe9J540uxT4tUb5kTP1Cs+xJCjxKcqIVPZtRkrLw/1pUM5vKxg4a3I2GYFLmHoQ==
   /use-subscription/1.1.1_react@16.12.0:
     dependencies:
       react: 16.12.0
@@ -7688,6 +7792,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
+  /wonka/4.0.7:
+    dev: false
+    resolution:
+      integrity: sha512-Uhyl2cgWCUksYtU0Jt8MSzKUqK4BVUrewWxnn1YlKL3Zco4sDcCUDkbgH0i762HJs1rtsq03cfzsCWxJKaDgVg==
   /worker-farm/1.7.0:
     dependencies:
       errno: 0.1.7
@@ -7765,6 +7873,7 @@ specifiers:
   '@types/wait-on': ^3.2.0
   apollo-server: ^2.9.16
   axios: ^0.19.2
+  axios-hooks: ^1.9.0
   chokidar: ^3.3.1
   cors: ^2.8.5
   cross-env: ^7.0.0
@@ -7773,8 +7882,10 @@ specifiers:
   graphql-request: ^1.8.2
   graphql-tag: ^2.10.1
   graphql-tag-ts: ^0.1.14
+  isomorphic-unfetch: ^3.0.0
   lodash: ^4.17.15
   next: ^9.2.1
+  next-urql: ^0.2.5
   npm-run-all: ^4.1.5
   react: ^16.12.0
   react-dom: ^16.12.0
@@ -7783,4 +7894,5 @@ specifiers:
   ts-node-dev: ^1.0.0-pre.44
   type-graphql: ^0.17.6
   typescript: ^3.8.0-beta
+  urql: ^1.8.2
   wait-on: ^4.0.0
