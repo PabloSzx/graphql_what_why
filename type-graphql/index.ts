@@ -2,6 +2,7 @@ import "reflect-metadata";
 
 import { ApolloServer } from "apollo-server-express";
 import express from "express";
+import path from "path";
 import {
   buildSchemaSync,
   Field,
@@ -31,6 +32,7 @@ const app = express();
 const apolloServer = new ApolloServer({
   schema: buildSchemaSync({
     resolvers: [HelloWorldResolver],
+    emitSchemaFile: path.resolve(__dirname, "./schema.gql"),
   }),
 });
 
