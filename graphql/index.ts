@@ -1,8 +1,29 @@
+import { ApolloServer, gql } from "apollo-server-express";
 import express from "express";
-import notifier from "node-notifier";
-import requireEnv from "require-env-variable";
 
-import { apolloServer } from "./apollo";
+import { helloWorldData } from "../data";
+
+const typeDefs = gql`
+  type HelloWorld {
+    hello: String!
+  }
+  type Query {
+    helloWorld: HelloWorld!
+  }
+`;
+
+const resolvers = {
+  Query: {
+    helloWorld: () => {
+      return helloWorldData;
+    },
+  },
+};
+
+const apolloServer = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
 
 const app = express();
 
@@ -10,12 +31,8 @@ apolloServer.applyMiddleware({
   app,
 });
 
-const port = parseInt(requireEnv("PORT").PORT, 10);
+const port = parseInt(process.env.PORT || "3000", 10);
 
 app.listen({ port }, () => {
-  notifier.notify({
-    title: "🚀  GraphQL API Server ready",
-    message: `at http://localhost:${port}`,
-  });
   console.log(`🚀  GraphQL API Server ready at http://localhost:${port}`);
 });
