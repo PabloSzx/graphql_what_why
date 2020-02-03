@@ -25,7 +25,7 @@ const apolloServer = new ApolloServer({
   cors: true,
 });
 
-const port = parseInt(process.env.PORT || "3000", 10);
+const port = 3001;
 
 apolloServer.listen({ port }, () => {
   console.log(`🚀  GraphQL API Server ready at\

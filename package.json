@@ -9,14 +9,14 @@
     "build": "next build",
     "dev": "cross-env NODE_ENV=development run-p -l dev-*",
     "dev-client": "next -p 3000",
-    "dev-graphql": "cross-env PORT=3001 ts-node-dev -P ./api/tsconfig.json --respawn ./api/graphql/index.ts",
-    "dev-rest": "cross-env PORT=3002 ts-node-dev  -P ./api/tsconfig.json --respawn ./api/rest/index.ts",
-    "dev-typegraphql": "cross-env PORT=3003 ts-node-dev  -P ./api/tsconfig.json --respawn ./api/type-graphql/index.ts",
+    "dev-graphql": "ts-node-dev -P ./api/tsconfig.json --respawn ./api/graphql/index.ts",
+    "dev-rest": "ts-node-dev  -P ./api/tsconfig.json --respawn ./api/rest/index.ts",
+    "dev-typegraphql": "ts-node-dev  -P ./api/tsconfig.json --respawn ./api/type-graphql/index.ts",
     "start": "cross-env NODE_ENV=production run-p -l start-*",
     "start-client": "next start -p 3000",
-    "start-graphql": "cross-env PORT=3001 ts-node  -P ./api/tsconfig.json ./api/graphql/index.ts",
-    "start-rest": "cross-env PORT=3002 ts-node  -P ./api/tsconfig.json ./api/rest/index.ts",
-    "start-typegraphql": "cross-env PORT=3003 ts-node  -P ./api/tsconfig.json ./api/type-graphql/index.ts"
+    "start-graphql": "ts-node  -P ./api/tsconfig.json ./api/graphql/index.ts",
+    "start-rest": "ts-node  -P ./api/tsconfig.json ./api/rest/index.ts",
+    "start-typegraphql": "ts-node  -P ./api/tsconfig.json ./api/type-graphql/index.ts"
   },
   "dependencies": {
     "apollo-server": "^2.9.16",

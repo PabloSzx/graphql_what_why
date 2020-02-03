@@ -10,7 +10,7 @@ app.get("/helloWorld", (_req, res) => {
   res.send(helloWorldData);
 });
 
-const port = parseInt(process.env.PORT || "3000", 10);
+const port = 3002;
 
 app.listen({ port }, () => {
   console.log(`🚀  Rest API Server ready at http://localhost:${port}`);

@@ -34,7 +34,7 @@ const apolloServer = new ApolloServer({
   cors: true,
 });
 
-const port = parseInt(process.env.PORT || "3000", 10);
+const port = 3003;
 
 apolloServer.listen({ port }, () => {
   console.log(`🚀  TypeGraphQL API Server ready at\
