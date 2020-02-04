@@ -2,16 +2,16 @@ import { NextPage } from "next";
 import { withUrqlClient } from "next-urql";
 import { useQuery } from "urql";
 
-import { HERO_QUERY } from "../graphql/queries";
+import { HERO_QUERY, IHeroData } from "../graphql/queries";
 import omitDeep from "../utils/omitDeep";
 
 const CodeFirst: NextPage = () => {
-  const [{ data, fetching }] = useQuery({
+  const [{ data, fetching }] = useQuery<IHeroData>({
     query: HERO_QUERY,
   });
   return (
     <div>
-      {fetching
+      {fetching || !data
         ? "Loading..."
         : JSON.stringify(omitDeep(data, ["__typename"]), null, 2)}
     </div>
