@@ -10,7 +10,7 @@ dependencies:
   graphql-tag-ts: 0.1.14_graphql@14.6.0
   isomorphic-unfetch: 3.0.0
   lodash: 4.17.15
-  next: 9.2.1_abb09bebc0e0ed228e774569cd754869
+  next: 9.2.1_91142a59788a6b73516b93d9cabe711e
   next-urql: 0.2.5_f9fa721d5b0421669d548b56ca1a2e5d
   react: 16.12.0
   react-dom: 16.12.0_react@16.12.0
@@ -30,9 +30,9 @@ devDependencies:
   '@types/wait-on': 3.2.0
   cross-env: 7.0.0
   npm-run-all: 4.1.5
-  ts-node: 8.6.2_typescript@3.8.0-beta
-  ts-node-dev: 1.0.0-pre.44_typescript@3.8.0-beta
-  typescript: 3.8.0-beta
+  ts-node: 8.6.2_typescript@3.7.5
+  ts-node-dev: 1.0.0-pre.44_typescript@3.7.5
+  typescript: 3.7.5
 lockfileVersion: 5.1
 packages:
   /@ampproject/toolbox-core/1.1.1:
@@ -4993,7 +4993,7 @@ packages:
       urql: ^1.1.0
     resolution:
       integrity: sha512-PUOtP0g/TQcDWBtvOA6F80VDFRh8HLTWGWhZGE0e4indl9ryTphFyKD8108Rou3fY/07Ogg0p7yllWRiSqC9cQ==
-  /next/9.2.1_abb09bebc0e0ed228e774569cd754869:
+  /next/9.2.1_91142a59788a6b73516b93d9cabe711e:
     dependencies:
       '@ampproject/toolbox-optimizer': 1.1.1_lru-cache@5.1.1
       '@babel/core': 7.7.2
@@ -5051,7 +5051,7 @@ packages:
       object-assign: 4.1.1
       ora: 3.4.0
       path-to-regexp: 6.1.0
-      pnp-webpack-plugin: 1.5.0_typescript@3.8.0-beta
+      pnp-webpack-plugin: 1.5.0_typescript@3.7.5
       postcss-flexbugs-fixes: 4.1.0
       postcss-loader: 3.0.0
       postcss-preset-env: 6.7.0
@@ -5630,9 +5630,9 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==
-  /pnp-webpack-plugin/1.5.0_typescript@3.8.0-beta:
+  /pnp-webpack-plugin/1.5.0_typescript@3.7.5:
     dependencies:
-      ts-pnp: 1.1.5_typescript@3.8.0-beta
+      ts-pnp: 1.1.5_typescript@3.7.5
     dev: false
     engines:
       node: '>=6'
@@ -7325,7 +7325,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-uEtWkFM/sdZvRNNDL3Ehu4WVpwaulhwQszV8mrtcdeE8nN00BV9mAmQ88RkrBhFgl9gMgvjJLAQcZbnPXI9mlA==
-  /ts-node-dev/1.0.0-pre.44_typescript@3.8.0-beta:
+  /ts-node-dev/1.0.0-pre.44_typescript@3.7.5:
     dependencies:
       dateformat: 1.0.12
       dynamic-dedupe: 0.3.0
@@ -7337,7 +7337,7 @@ packages:
       rimraf: 2.7.1
       source-map-support: 0.5.16
       tree-kill: 1.2.2
-      ts-node: 8.6.2_typescript@3.8.0-beta
+      ts-node: 8.6.2_typescript@3.7.5
       tsconfig: 7.0.0
     dev: true
     engines:
@@ -7347,13 +7347,13 @@ packages:
       typescript: '*'
     resolution:
       integrity: sha512-M5ZwvB6FU3jtc70i5lFth86/6Qj5XR5nMMBwVxZF4cZhpO7XcbWw6tbNiJo22Zx0KfjEj9py5DANhwLOkPPufw==
-  /ts-node/8.6.2_typescript@3.8.0-beta:
+  /ts-node/8.6.2_typescript@3.7.5:
     dependencies:
       arg: 4.1.3
       diff: 4.0.2
       make-error: 1.3.5
       source-map-support: 0.5.16
-      typescript: 3.8.0-beta
+      typescript: 3.7.5
       yn: 3.1.1
     dev: true
     engines:
@@ -7363,9 +7363,9 @@ packages:
       typescript: '>=2.7'
     resolution:
       integrity: sha512-4mZEbofxGqLL2RImpe3zMJukvEvcO1XP8bj8ozBPySdCUXEcU5cIRwR0aM3R+VoZq7iXc8N86NC0FspGRqP4gg==
-  /ts-pnp/1.1.5_typescript@3.8.0-beta:
+  /ts-pnp/1.1.5_typescript@3.7.5:
     dependencies:
-      typescript: 3.8.0-beta
+      typescript: 3.7.5
     dev: false
     engines:
       node: '>=6'
@@ -7451,12 +7451,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-  /typescript/3.8.0-beta:
+  /typescript/3.7.5:
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-mQEmQUJg0CQBhf/GSVnGscKv/jrKsrLxE01AhdjYmBNoXX2Iah3i38ufxXByXacK6Fc5Nr9oMz7MjpjgddiknA==
+      integrity: sha512-/P5lkRXkWHNAbcJIiHPfRoKqyd7bsyCma1hZNUGfn20qm64T6ZBlrzprymeu918H+mB/0rIg2gGK/BXkhhYgBw==
   /unfetch/4.1.0:
     dev: false
     resolution:
@@ -7893,6 +7893,6 @@ specifiers:
   ts-node: ^8.6.2
   ts-node-dev: ^1.0.0-pre.44
   type-graphql: ^0.17.6
-  typescript: ^3.8.0-beta
+  typescript: ^3.7.5
   urql: ^1.8.2
   wait-on: ^4.0.0

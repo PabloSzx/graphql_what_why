@@ -2,33 +2,13 @@ import "reflect-metadata";
 
 import { ApolloServer } from "apollo-server";
 import path from "path";
-import {
-  buildSchemaSync,
-  Field,
-  ObjectType,
-  Query,
-  Resolver,
-} from "type-graphql";
+import { buildSchemaSync } from "type-graphql";
 
-import { helloWorldData } from "../data";
-
-@ObjectType()
-export class HelloWorld {
-  @Field()
-  hello: string;
-}
-
-@Resolver()
-export class HelloWorldResolver {
-  @Query(() => HelloWorld)
-  helloWorld() {
-    return helloWorldData;
-  }
-}
+import * as resolvers from "./resolvers";
 
 const apolloServer = new ApolloServer({
   schema: buildSchemaSync({
-    resolvers: [HelloWorldResolver],
+    resolvers: [...(Object.values(resolvers) as Function[])],
     emitSchemaFile: path.resolve(__dirname, "./schema.gql"),
   }),
   cors: true,

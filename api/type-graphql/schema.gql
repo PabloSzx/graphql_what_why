@@ -3,10 +3,25 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
-type HelloWorld {
-  hello: String!
+type Character {
+  name: String!
+  friends: [Character!]!
+  homeWorld: Planet
+  species: Species!
+}
+
+type Planet {
+  name: String!
+  climate: String!
+  neighbors: [Planet!]!
 }
 
 type Query {
-  helloWorld: HelloWorld!
+  hero: Character!
+}
+
+type Species {
+  name: String!
+  lifespan: Float!
+  origin: Planet!
 }
