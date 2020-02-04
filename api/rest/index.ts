@@ -1,14 +1,17 @@
 import cors from "cors";
 import express from "express";
 
-import { helloWorldData } from "../data";
+import { CharactersRouter } from "./routes/characters";
+import { PlanetsRouter } from "./routes/planets";
+import { SpeciesRouter } from "./routes/species";
 
 const app = express();
 
 app.use(cors());
-app.get("/helloWorld", (_req, res) => {
-  res.send(helloWorldData);
-});
+
+app.use("/species", SpeciesRouter);
+app.use("/characters", CharactersRouter);
+app.use("/planets", PlanetsRouter);
 
 const port = 3002;
 
