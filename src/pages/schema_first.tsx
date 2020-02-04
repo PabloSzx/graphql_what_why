@@ -9,6 +9,7 @@ const SchemaFirst: NextPage = () => {
   const [{ data, fetching }] = useQuery({
     query: HERO_QUERY,
   });
+
   return (
     <div>
       {fetching

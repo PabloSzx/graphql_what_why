@@ -8,7 +8,6 @@ import { SpeciesRouter } from "./routes/species";
 const app = express();
 
 app.use(cors());
-
 app.use("/species", SpeciesRouter);
 app.use("/characters", CharactersRouter);
 app.use("/planets", PlanetsRouter);
