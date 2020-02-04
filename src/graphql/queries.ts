@@ -1,9 +1,33 @@
 import gql from "graphql-tag";
 
-export const HELLO_QUERY = gql`
+export const HERO_QUERY = gql`
   query {
-    helloWorld {
-      hello
+    hero {
+      name
+      friends {
+        name
+        friends {
+          name
+        }
+      }
+      species {
+        name
+        lifespan
+        origin {
+          name
+          neighbors {
+            name
+            climate
+          }
+        }
+      }
+      homeWorld {
+        name
+        neighbors {
+          name
+        }
+        climate
+      }
     }
   }
 `;
