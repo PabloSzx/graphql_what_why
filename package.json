@@ -19,7 +19,7 @@
     "start-typegraphql": "ts-node  -P ./api/tsconfig.json ./api/type-graphql/index.ts"
   },
   "dependencies": {
-    "apollo-server": "^2.9.16",
+    "apollo-server": "^2.14.2",
     "axios": "^0.19.2",
     "axios-hooks": "^1.9.0",
     "cors": "^2.8.5",
